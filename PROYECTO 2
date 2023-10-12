@@ -1,0 +1,29 @@
+import tkinter as tk
+
+def calcular_promedio():
+    notas = [float(entry.get()) for entry in notas_entries]
+    promedio = sum(notas) / len(notas)
+    resultado_label.config(text=f';Promedio: {promedio:.2f}')
+
+app = tk.Tk()
+app.title("Calculadora de Promedios&quot")
+
+etiquetas = []
+notas_entries = []
+
+for i in range(1, 6):
+    etiqueta = tk.Label(app, text=f'Nota #{i}:')
+    etiqueta.pack()
+    etiquetas.append(etiqueta)
+
+nota_entry = tk.Entry(app)
+nota_entry.pack()
+notas_entries.append(nota_entry)
+
+calcular_button = tk.Button(app, text="Calcular Promedio", command=calcular_promedio)
+calcular_button.pack()
+
+resultado_label = tk.Label(app, text="")
+resultado_label.pack()
+
+app.mainloop()
