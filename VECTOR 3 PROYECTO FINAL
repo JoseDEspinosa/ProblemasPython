@@ -1,0 +1,22 @@
+# Función para multiplicar elementos de dos vectores y almacenar el resultado en un tercer vector
+def multiplicar_vectores(vector_A, vector_B):
+    vector_C = []  # Vector para almacenar los resultados de la multiplicación
+
+    for i in range(len(vector_A)):
+        resultado = vector_A[i] * vector_B[-(i + 1)]  # Multiplicación de elementos
+        vector_C.append(resultado)  # Almacenar el resultado en el vector_C
+
+    return vector_C
+
+
+# Lectura de los vectores A y B de 10 elementos cada uno
+vector_A = [int(input(f"Ingrese el elemento {i + 1} del vector A: ")) for i in range(10)]
+vector_B = [int(input(f"Ingrese el elemento {i + 1} del vector B: ")) for i in range(10)]
+
+# Llamada a la función para realizar la multiplicación
+vector_C = multiplicar_vectores(vector_A, vector_B)
+
+# Imprimir los resultados
+print("Vector A:", vector_A)
+print("Vector B:", vector_B)
+print("Resultado de la multiplicación (Vector C):", vector_C)
