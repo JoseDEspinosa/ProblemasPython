@@ -1,0 +1,15 @@
+# Función para determinar el signo de un número
+def determinar_signo(numero):
+    if numero > 0:
+        return 1  # Si el número es positivo, devolver 1
+    elif numero < 0:
+        return -1  # Si el número es negativo, devolver -1
+    else:
+        return 0  # Si el número es cero, devolver 0
+
+# Lectura del número desde el usuario
+numero_ingresado = float(input("Ingrese un número: "))
+
+# Llamada a la función para determinar el signo y mostrar el resultado
+resultado = determinar_signo(numero_ingresado)
+print(f"El signo del número {numero_ingresado} es: {resultado}")
