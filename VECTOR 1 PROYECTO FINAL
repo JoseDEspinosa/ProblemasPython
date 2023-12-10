@@ -1,0 +1,9 @@
+# Crear un vector con 15 números
+vector_original = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+# Crear un vector inverso al vector original
+vector_inverso = vector_original[::-1]
+
+# Imprimir el vector resultante
+print("Vector Original:", vector_original)
+print("Vector Inverso:", vector_inverso)
