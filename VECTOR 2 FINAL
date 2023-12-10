@@ -1,0 +1,22 @@
+def buscar_en_vector(numero, vector):
+    for i in range(len(vector)):
+        if vector[i] == numero:
+            return i  # Devolver la posición si se encuentra
+
+    return -1  # Devolver -1 si no se encuentra el número en el vector
+
+
+# Vector con 10 elementos (puedes modificarlo según tus necesidades)
+vector_X = [5, 8, 12, 3, 7, 20, 15, 10, 6, 1]
+
+# Pedir al usuario que ingrese un número
+numero_buscar = int(input("Ingrese un número para buscar en el vector X: "))
+
+# Realizar la búsqueda
+posicion = buscar_en_vector(numero_buscar, vector_X)
+
+# Mostrar el resultado
+if posicion != -1:
+    print(f"El número {numero_buscar} se encuentra en la posición {posicion} del vector.")
+else:
+    print(f"El número {numero_buscar} NO se encuentra en el vector.")
